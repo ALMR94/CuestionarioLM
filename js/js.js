@@ -139,7 +139,7 @@ function corregirSelect(){
             }
         else {
             darRespuestaHtml("- Pregunta "+(n+1)+": Incorrecta");
-            if(n==0){
+            if(n==2){
                 darExplicacion("Respuesta correcta: c");
                 darExplicacion("Si un avión explota no podrás salir de él, como mucho saldrás por las noticias.");
             } else {
@@ -174,9 +174,9 @@ function corregirMultiple(){
                 }
             }
         } 
-        if(n==2 && mal==true){
+        if(n==4 && mal==true){
                 darExplicacion("Respuestas correcta: a, b, d");
-            } else if (n==3 && mal==true) {
+            } else if (n==5 && mal==true) {
                 darExplicacion("Respuestas correcta: a, d");
             }
         
@@ -192,7 +192,7 @@ function corregirText() {
             nota +=1;
         } else {
             darRespuestaHtml("- Pregunta "+(n+1)+": Incorrecta");
-            if(n==4){
+            if(n==0){
                 darExplicacion("Respuesta correcta: tela");
                 darExplicacion("'Tela' digo y no la entiendes; 'tela' vuelvo a repetir");
             } else {
@@ -208,10 +208,10 @@ function corregirRadio(){
     var f=formElement;
     for(n=8;n<10;n++){
         var nombreRadio;
-        if (n==6){
-            nombreRadio=f.seis;
+        if (n==8){
+            nombreRadio=f.ocho;
         } else {
-            nombreRadio=f.siete;
+            nombreRadio=f.nueve;
         }
         if (nombreRadio.value==respuestaRadio[n]) {
             darRespuestaHtml("- Pregunta "+(n+1)+": Correcta");
@@ -260,9 +260,9 @@ function corregirCheckbox(){
             }   
         } 
     }
-    if(n==8 && mal==true){
+    if(n==6 && mal==true){
                 darExplicacion("Respuestas correcta: b, c, d, e, f");
-            } else if (n==9 && mal==true) {
+            } else if (n==7 && mal==true) {
                 darExplicacion("Respuestas correcta: a, b");
             }
   }
@@ -270,7 +270,7 @@ function corregirCheckbox(){
 }
 
 //****************************************************************************************************
-// Poner los datos recibios en el HTML
+// Poner los datos recibidos en el HTML
 
 
 function ponerDatosSelectHtml(t, opt, numPregunta) {
@@ -304,11 +304,11 @@ function ponerDatosRadioHtml(t, opt, numPregunta) {
     document.getElementsByTagName("h3")[numPregunta].innerHTML = t;
     var radioCont = document.getElementsByClassName('radioDiv')[numPregunta-6];
     var radioAsignado;
-    if (numPregunta==6){
-     radioAsignado="seis";
+    if (numPregunta==8){
+     radioAsignado="ocho";
     }
     else {
-     radioAsignado="siete";
+     radioAsignado="nueve";
     }
     for (i = 0; i < opt.length; i++) { 
         var input = document.createElement("input");
@@ -327,11 +327,11 @@ function ponerDatosCheckboxHtml(t,opt, numPregunta){
  var checkboxContainer=document.getElementsByClassName('checkboxDiv')[numPregunta-8];
  document.getElementsByTagName("h3")[numPregunta].innerHTML = t;
  var nombreAsignado;
- if (numPregunta==8){
-     nombreAsignado="ocho";
+ if (numPregunta==6){
+     nombreAsignado="seis";
  }
  else {
-     nombreAsignado="nueve";
+     nombreAsignado="siete";
  }
  for (i = 0; i < opt.length; i++) { 
     var input = document.createElement("input");
