@@ -59,7 +59,7 @@ function gestionarXml(dadesXml) {
 
     //SELECT
     //Recuperamos el título y las opciones, guardamos la respuesta correcta
-    for (numPregunta=0; numPregunta<2; numPregunta++) {
+    for (numPregunta=2; numPregunta<4; numPregunta++) {
         var tituloSelect = xmlDoc.getElementsByTagName("title")[numPregunta].innerHTML;
         var opcionesSelect = [];
         var nopt = xmlDoc.getElementsByTagName("question")[numPregunta].getElementsByTagName('option').length;
@@ -72,7 +72,7 @@ function gestionarXml(dadesXml) {
     
     //SELECT MULTIPLE
     //Recuperamos el título y las opciones, guardamos las respuestas correctas
-    for (numPregunta=2; numPregunta<4; numPregunta++){
+    for (numPregunta=4; numPregunta<6; numPregunta++){
         var tituloMultiple = xmlDoc.getElementsByTagName("title")[numPregunta].innerHTML;
         var opcionesMultiple = [];
         var nopt = xmlDoc.getElementsByTagName("question")[numPregunta].getElementsByTagName('option').length;
@@ -89,7 +89,7 @@ function gestionarXml(dadesXml) {
 
     //TEXT
     //Recuperamos el título y la respuesta correcta del input text
-    for (numPregunta=4; numPregunta<6; numPregunta++) {
+    for (numPregunta=0; numPregunta<2; numPregunta++) {
         var tituloInput = xmlDoc.getElementsByTagName("title")[numPregunta].innerHTML;
         ponerDatosInputHtml(tituloInput,numPregunta);
         respuestaText[numPregunta] = xmlDoc.getElementsByTagName("question")[numPregunta].getElementsByTagName("answer")[0].innerHTML;
@@ -97,7 +97,7 @@ function gestionarXml(dadesXml) {
 
     //RADIO
     //Recuperamos el título y las opciones, guardamos la respuesta correcta
-    for (numPregunta=6 ; numPregunta<8;numPregunta++) {
+    for (numPregunta=8 ; numPregunta<10;numPregunta++) {
         var tituloRadio = xmlDoc.getElementsByTagName("title")[numPregunta].innerHTML;
         var opcionesRadio = [];
         var nopt = xmlDoc.getElementsByTagName("question")[numPregunta].getElementsByTagName('option').length;
@@ -110,7 +110,7 @@ function gestionarXml(dadesXml) {
 
     //CHECKBOX
     //Recuperamos el título y las opciones, guardamos las respuestas correctas
-    for (numPregunta=8; numPregunta<10; numPregunta++){
+    for (numPregunta=6; numPregunta<8; numPregunta++){
         var tituloCheckbox = xmlDoc.getElementsByTagName("title")[numPregunta].innerHTML;
         var opcionesCheckbox = [];
         var nopt = xmlDoc.getElementsByTagName("question")[numPregunta].getElementsByTagName('option').length;
@@ -131,7 +131,7 @@ function gestionarXml(dadesXml) {
 
 //Corrección de los dos Select
 function corregirSelect(){
-    for(n=0;n<2;n++){
+    for(n=2;n<4;n++){
         var sel = formElement.elements[n];  
          if ((sel.selectedIndex-1)==respuestaSelect[n]) {
             darRespuestaHtml("- Pregunta "+(n+1)+": Correcta");
@@ -152,7 +152,7 @@ function corregirSelect(){
 
 //Corrección de los Select MULTIPLE
 function corregirMultiple(){
-    for(n=2;n<4;n++){
+    for(n=4;n<6;n++){
         var sel = formElement.elements[n];
         var escorrecta=[];
         var mal=false;
@@ -185,7 +185,7 @@ function corregirMultiple(){
 
 //Corrección de los text
 function corregirText() {
-    for(n=4;n<6;n++){
+    for(n=0;n<2;n++){
         var txt = formElement.elements[n].value;  
          if (txt.toLowerCase()==respuestaText[n]) {
             darRespuestaHtml("- Pregunta "+(n+1)+": Correcta");
@@ -206,7 +206,7 @@ function corregirText() {
 //Corrección de los radio
 function corregirRadio(){
     var f=formElement;
-    for(n=6;n<8;n++){
+    for(n=8;n<10;n++){
         var nombreRadio;
         if (n==6){
             nombreRadio=f.seis;
@@ -234,7 +234,7 @@ function corregirCheckbox(){
   //Para cada opción mira si está checkeada, si está checkeada mira si es correcta y lo guarda en un array escorrecta[]
   var f=formElement;
   var escorrecta = [];
-  for (n=8;n<10;n++){
+  for (n=6;n<8;n++){
     var nombre;
     var mal=false;
     if (n==8){
