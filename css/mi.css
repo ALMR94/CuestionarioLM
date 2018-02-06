@@ -1,0 +1,141 @@
+body,html{
+    margin:0px;
+    font-family: 'Ubuntu Condensed', serif;
+    font-size:4vw;
+    cursor: default;
+    background-color:green;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+body{
+    width:90%;
+    padding-left:5%;
+    padding-right:5%;
+    margin-top: 50%;
+    
+}
+
+p{
+    margin: 1.5% 0%;
+	font-family: 'Ubuntu Condensed', serif;
+}
+
+ul {
+    display: block;
+	font-family: 'Ubuntu Condensed', serif;
+    list-style-type: none;
+    margin: 0;    
+    padding: 0% 5%;
+    overflow: hidden;
+    background-color: darkgreen;
+    text-align: center;
+}
+
+h2{
+    font-size:5.5vw;
+    margin: 5% 0%;
+	font-family: 'Ubuntu Condensed', serif;
+}
+h4{
+    font-size:5vw;
+    margin: 2.5% 0%;
+	font-family: 'Ubuntu Condensed', serif;
+}
+
+/*Menu superior*/
+
+.elementomenu {
+    display: inline-block;
+    background-color: royalgreen;
+    font-weight: bold;
+	font-size: 5vw;
+    text-align: center;
+    color: lightgreen;
+    width: 40%;
+    border: 1px deepgreen solid;
+    padding: 0.5%;
+    margin:1% auto;
+    overflow: hidden;   
+}
+
+.elementomenu:hover{
+    background-color: midnightblue;
+    color:lightgreen;
+    border: 1px royalblue solid;
+}
+
+#exam{
+    width:80%;
+}
+
+#menuSuperior {    
+    position:fixed;
+    width:100%;
+    height: 20%;
+    top: 0%;
+    left: 0%;
+    background-color:lightgreen;
+}
+
+#menuDiv{
+    width:100%;
+    height: 25%;
+}
+
+#logo{
+    text-align:center;
+    width:100%;
+    padding:1% 0%;
+    background-color:lightgreen;
+}
+
+#logoimg{
+    max-width: 90%;
+}
+
+.divIndex{
+    width:100%;
+    color: orange;
+}
+
+#ubiDiv{
+    display:none;
+
+}
+#examDiv{
+    display:none;
+}
+
+#info{
+    text-decoration: underline;
+}
+
+.ubiImg{
+    max-width: 70%;
+    margin: 1%;
+}
+
+#imagenesUbi{
+    text-align:center;
+    width:100%;
+    padding:1% 0%;
+}
+
+a{
+    text-decoration: none;
+    color: orange;
+    font-size: 6.5vw;
+    font-weight: bold;
+}
+
+
+
+a:hover{
+    color: darkgreen;
+    text-decoration: underline;
+}
+
+#link{
+ text-align: center;   
+}

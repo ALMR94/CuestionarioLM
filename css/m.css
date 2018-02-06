@@ -1,0 +1,106 @@
+body,html{
+    margin:0px;
+    font-family: 'Ubuntu Condensed', serif;
+    font-size:4vw;
+    background-color:green;
+}
+body{width:90%;padding-left:5%;padding-right:5%}
+input,select{width:80%}
+form{background-color:cleargreen;padding:1%;font-family: 'Ubuntu Condensed', serif;}
+
+h3{
+    font-size:5.5vw;
+    color:orange;
+	font-family: 'Ubuntu Condensed', serif;
+    margin: 1% 0%;
+}
+
+input[type=submit]{margin:auto;}
+
+input[type=checkbox]{width:5%;zoom:1.5}
+
+input[type=radio]{width:5%;zoom:1.25}
+
+form{background-color:lightgreen;padding:3%}
+
+select, input[type=text] {
+    padding: 0.5%;
+	font-family: 'Ubuntu Condensed', serif;
+    border: 1px darkgreen solid;
+    border-radius: 4px;
+    background-color: green;
+    color: orange;
+    font-size: 4vw;
+}
+
+
+label{
+    color: orange;
+    font-size: 4vw;
+}
+
+select:focus,input[type=text]:focus{
+    border-color:navy;
+}
+
+
+#cronometro{
+    position: fixed;
+    top: 7.5%;
+    right: 0px;
+    background-color: gray;
+    font-weight: bold;
+	font-size: 4vw;
+    text-align: center;
+    color: orange;
+    padding: 1%;
+    border: 2px black solid;
+    border-radius: 4px;
+    margin:0.5%;
+    overflow: hidden;  
+    opacity: 0.6; 
+}
+
+#cronometro p{
+    margin: 0;
+}
+
+input[type=submit]{
+    width: 50%;
+    padding: 2% 0%;
+    border: 1px darkgreen solid;
+    border-radius: 4px;
+    background-color: green;
+    color: orange;
+    font-size: 5vw;
+    text-align: center}
+
+#correccion{text-align: center}
+
+/*-----------*/
+
+#notaFinal{
+    display: none;
+    background-color: khaki;
+    padding: 1%;
+    margin-top: 3%;
+    border: 2px gold solid;
+    border-radius: 4px;
+}
+
+p{
+    font-size:4vw;
+	font-family: 'Ubuntu Condensed', serif;
+    color:orange;
+}
+
+#logo{
+    text-align:center;
+    width:100%;
+    padding:1% 0%;
+    background-color:green;
+}
+
+#logoimg{
+    max-width: 90%;
+}

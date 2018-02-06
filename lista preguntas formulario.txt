@@ -1,0 +1,5 @@
+2 tipo text
+2 tipo select
+2 tipo multiple
+2 tipo checkbox
+2 tipo radio

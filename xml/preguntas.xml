@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<questions xmlns:xsi="http://www.w3.org/TR/xmlschema-1/" xsi:noNamespaceSchemaLocation="preguntas.xsd">
+    <question id="q001">
+        <type>text</type>
+        <title>1. La consola más vendida de todas es...</title>
+        <answer>Nintendo DS</answer>
+    </question>
+    <question id="q002">
+        <type>text</type>
+        <title>2. La compañía creadora de la PSP fue...</title>
+        <answer>Sony</answer>
+    </question>
+    <question id="q003">
+        <type>select</type>
+        <title>3. ¿En qué año salió el primer juego de Pokémon?</title>
+        <option>2000</option>
+        <option>1512</option>
+        <option>1996</option>
+        <answer>2</answer>
+    </question>
+    <question id="q004">
+        <type>select</type>
+        <title>4. ¿Cuál es el nombre de la desarrolladora de videojuegos que creó a Super Mario Bros?</title>
+        <option>a) Sony</option>
+        <option>b) Nintendo</option>
+        <option>c) Sega</option>
+        <answer>1</answer>
+    </question>
+    <question id="q005">
+        <type>multiple</type>
+        <title>5. ¿Qué consolas portátiles son de Nintendo?</title>
+		<option>a) Nintendo DS</option>
+        <option>b) PSP</option>
+        <option>c) PS Vita</option>
+		<option>d) Nintendo 3DS</option>
+		<option>e) Game Boy</option>
+        <answer>0</answer>
+		<answer>3</answer>
+		<answer>4</answer>
+    </question>
+    <question id="q006">
+        <type>multiple</type>
+        <title>6. ¿Qué tipo de consola es Nintendo Switch?</title>
+		<option>a) Portátil</option>
+        <option>b) Sobremesa</option>
+		<option>e) Voladora</option>
+        <answer>0</answer>
+		<answer>1</answer>
+    </question>
+    <question id="q007">
+        <type>checkbox</type>
+        <title>7. ¿De qué colores puede ser la PSP 1000 o FAT -la primera-?</title>
+        <option>a) Verde</option>
+        <option>b) Azul</option>
+        <option>c) Negra</option>
+        <option>d) Blanca</option>
+		<answer>2</answer>
+        <answer>3</answer>
+    </question>
+    <question id="q008">
+        <type>checkbox</type>
+        <title>8. ¿Qué consolas salieron en el año 2017?</title>
+        <option>a) Nintendo 3DS</option>
+        <option>b) Nintendo Switch</option>
+        <option>c) PlayStation 4</option>
+        <option>d) Xbox One X</option>
+        <answer>1</answer>
+		<answer>3</answer>
+    </question>
+    <question id="q009">
+        <type>radio</type>
+        <title>9. ¿Cuál fue el juego del año en 2017?</title>
+        <option>a) Nier: Automata</option>
+        <option>b) Zelda: Breath of the Wild</option>
+        <option>c) Horizon</option>
+        <option>d) The Last of Us</option>
+        <answer>1</answer>
+    </question>
+    <question id="q010">
+        <type>radio</type>
+        <title>10. ¿Cuál es el juego de Rockstar en el que el protagonista es un detective de los 40?</title>
+        <option>a) Red Dead Redemption</option>
+        <option>b) L. A. Noire</option>
+        <option>c) GTA V</option>
+        <answer>1</answer>
+    </question>
+</questions>

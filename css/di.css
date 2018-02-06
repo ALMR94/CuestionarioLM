@@ -1,0 +1,127 @@
+body,html{
+    margin:0px;
+    font-family: 'Ubuntu Condensed', serif;
+    font-size:1.25vw;
+    cursor: default;
+    background-color:green;
+}
+
+body{
+    width:80%;
+    padding-left:10%;
+    padding-right:10%;
+    margin-top: 15%;
+}
+
+ul {
+    list-style-type: none;
+	font-family: 'Ubuntu Condensed', serif;
+    margin: 0;    
+    padding: 0;
+    padding-left:10%;
+    overflow: hidden;
+    background-color: darkgreen;
+}
+
+h2{font-size:2vw;font-family: 'Ubuntu Condensed', serif;}
+h4{font-size:1.75vw;font-family: 'Ubuntu Condensed', serif;}
+
+/*Menu superior*/
+
+.elementomenu {
+    display: block;
+    background-color: royalgreen;
+	font-family: 'Ubuntu Condensed', serif;
+    font-weight: bold;
+	font-size: 1.75vw;
+    text-align: center;
+    color: lightgreen;
+    float:left;
+    width: 20%;
+    border: 1px darkgreen solid;
+    margin:0.5%;
+    overflow: hidden;   
+}
+
+.elementomenu:hover{
+    background-color: midnightblue;
+    color:lightgreen;
+	font-family: 'Ubuntu Condensed', serif;
+    border: 1px royalblue solid;
+}
+
+#menuSuperior {    
+    position:fixed;
+    width:100%;
+    height: 22.5%;
+    top: 0%;
+    left: 0%;
+    background-color:lightgreen;
+	font-family: 'Ubuntu Condensed', serif;
+}
+
+#menuDiv{
+    width:100%;
+    height: 25%;
+}
+
+#logo{
+    text-align:center;
+    width:100%;
+    height: 75%;
+    padding:1% 0%;
+    background-color:lightgreen;
+}
+
+#logoimg{
+    height: 100%;
+}
+
+.divIndex{
+    width:100%;
+    color: orange;
+	font-family: 'Ubuntu Condensed', serif;
+
+}
+
+#ubiDiv{
+    display:none;
+
+}
+#examDiv{
+    display:none;
+}
+
+#info{
+    text-decoration: underline;
+}
+
+.ubiImg{
+    width: 30%;
+    margin: 0% 5%;
+}
+
+#imagenesUbi{
+    text-align:center;
+    width:100%;
+    padding:1% 0%;
+}
+
+a{
+    text-decoration: none;
+    color: orange;
+	font-family: 'Ubuntu Condensed', serif;
+    font-size: 3vw;
+    font-weight: bold;
+}
+
+
+
+a:hover{
+    color: darkblue;
+    text-decoration: underline;
+}
+
+#link{
+ text-align: center;   
+}
