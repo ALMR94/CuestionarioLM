@@ -59,7 +59,7 @@ function gestionarXml(dadesXml) {
 
     //SELECT
     //Recuperamos el título y las opciones, guardamos la respuesta correcta
-    for (numPregunta=2; numPregunta<4; numPregunta++) {
+    for (numPregunta=0; numPregunta<2; numPregunta++) {
         var tituloSelect = xmlDoc.getElementsByTagName("title")[numPregunta].innerHTML;
         var opcionesSelect = [];
         var nopt = xmlDoc.getElementsByTagName("question")[numPregunta].getElementsByTagName('option').length;
@@ -72,7 +72,7 @@ function gestionarXml(dadesXml) {
     
     //SELECT MULTIPLE
     //Recuperamos el título y las opciones, guardamos las respuestas correctas
-    for (numPregunta=4; numPregunta<6; numPregunta++){
+    for (numPregunta=2; numPregunta<4; numPregunta++){
         var tituloMultiple = xmlDoc.getElementsByTagName("title")[numPregunta].innerHTML;
         var opcionesMultiple = [];
         var nopt = xmlDoc.getElementsByTagName("question")[numPregunta].getElementsByTagName('option').length;
@@ -89,7 +89,7 @@ function gestionarXml(dadesXml) {
 
     //TEXT
     //Recuperamos el título y la respuesta correcta del input text
-    for (numPregunta=0; numPregunta<2; numPregunta++) {
+    for (numPregunta=4; numPregunta<6; numPregunta++) {
         var tituloInput = xmlDoc.getElementsByTagName("title")[numPregunta].innerHTML;
         ponerDatosInputHtml(tituloInput,numPregunta);
         respuestaText[numPregunta] = xmlDoc.getElementsByTagName("question")[numPregunta].getElementsByTagName("answer")[0].innerHTML;
@@ -97,7 +97,7 @@ function gestionarXml(dadesXml) {
 
     //RADIO
     //Recuperamos el título y las opciones, guardamos la respuesta correcta
-    for (numPregunta=8 ; numPregunta<10;numPregunta++) {
+    for (numPregunta=6 ; numPregunta<8;numPregunta++) {
         var tituloRadio = xmlDoc.getElementsByTagName("title")[numPregunta].innerHTML;
         var opcionesRadio = [];
         var nopt = xmlDoc.getElementsByTagName("question")[numPregunta].getElementsByTagName('option').length;
@@ -110,7 +110,7 @@ function gestionarXml(dadesXml) {
 
     //CHECKBOX
     //Recuperamos el título y las opciones, guardamos las respuestas correctas
-    for (numPregunta=6; numPregunta<8; numPregunta++){
+    for (numPregunta=8; numPregunta<10; numPregunta++){
         var tituloCheckbox = xmlDoc.getElementsByTagName("title")[numPregunta].innerHTML;
         var opcionesCheckbox = [];
         var nopt = xmlDoc.getElementsByTagName("question")[numPregunta].getElementsByTagName('option').length;
@@ -131,7 +131,7 @@ function gestionarXml(dadesXml) {
 
 //Corrección de los dos Select
 function corregirSelect(){
-    for(n=2;n<4;n++){
+    for(n=0;n<2;n++){
         var sel = formElement.elements[n];  
          if ((sel.selectedIndex-1)==respuestaSelect[n]) {
             darRespuestaHtml("- Pregunta "+(n+1)+": Correcta");
@@ -139,7 +139,7 @@ function corregirSelect(){
             }
         else {
             darRespuestaHtml("- Pregunta "+(n+1)+": Incorrecta");
-            if(n==2){
+            if(n==0){
                 darExplicacion("Respuesta correcta: c");
                 darExplicacion("Si un avión explota no podrás salir de él, como mucho saldrás por las noticias.");
             } else {
@@ -152,7 +152,7 @@ function corregirSelect(){
 
 //Corrección de los Select MULTIPLE
 function corregirMultiple(){
-    for(n=4;n<6;n++){
+    for(n=2;n<4;n++){
         var sel = formElement.elements[n];
         var escorrecta=[];
         var mal=false;
@@ -174,9 +174,9 @@ function corregirMultiple(){
                 }
             }
         } 
-        if(n==4 && mal==true){
+        if(n==2 && mal==true){
                 darExplicacion("Respuestas correcta: a, b, d");
-            } else if (n==5 && mal==true) {
+            } else if (n==3 && mal==true) {
                 darExplicacion("Respuestas correcta: a, d");
             }
         
@@ -185,14 +185,14 @@ function corregirMultiple(){
 
 //Corrección de los text
 function corregirText() {
-    for(n=0;n<2;n++){
+    for(n=4;n<6;n++){
         var txt = formElement.elements[n].value;  
          if (txt.toLowerCase()==respuestaText[n]) {
             darRespuestaHtml("- Pregunta "+(n+1)+": Correcta");
             nota +=1;
         } else {
             darRespuestaHtml("- Pregunta "+(n+1)+": Incorrecta");
-            if(n==0){
+            if(n==4){
                 darExplicacion("Respuesta correcta: tela");
                 darExplicacion("'Tela' digo y no la entiendes; 'tela' vuelvo a repetir");
             } else {
@@ -206,12 +206,12 @@ function corregirText() {
 //Corrección de los radio
 function corregirRadio(){
     var f=formElement;
-    for(n=8;n<10;n++){
+    for(n=6;n<8;n++){
         var nombreRadio;
-        if (n==8){
-            nombreRadio=f.ocho;
+        if (n==6){
+            nombreRadio=f.seis;
         } else {
-            nombreRadio=f.nueve;
+            nombreRadio=f.siete;
         }
         if (nombreRadio.value==respuestaRadio[n]) {
             darRespuestaHtml("- Pregunta "+(n+1)+": Correcta");
@@ -234,7 +234,7 @@ function corregirCheckbox(){
   //Para cada opción mira si está checkeada, si está checkeada mira si es correcta y lo guarda en un array escorrecta[]
   var f=formElement;
   var escorrecta = [];
-  for (n=6;n<8;n++){
+  for (n=8;n<10;n++){
     var nombre;
     var mal=false;
     if (n==8){
@@ -260,9 +260,9 @@ function corregirCheckbox(){
             }   
         } 
     }
-    if(n==6 && mal==true){
+    if(n==8 && mal==true){
                 darExplicacion("Respuestas correcta: b, c, d, e, f");
-            } else if (n==7 && mal==true) {
+            } else if (n==9 && mal==true) {
                 darExplicacion("Respuestas correcta: a, b");
             }
   }
@@ -270,7 +270,7 @@ function corregirCheckbox(){
 }
 
 //****************************************************************************************************
-// Poner los datos recibidos en el HTML
+// Poner los datos recibios en el HTML
 
 
 function ponerDatosSelectHtml(t, opt, numPregunta) {
@@ -304,11 +304,11 @@ function ponerDatosRadioHtml(t, opt, numPregunta) {
     document.getElementsByTagName("h3")[numPregunta].innerHTML = t;
     var radioCont = document.getElementsByClassName('radioDiv')[numPregunta-6];
     var radioAsignado;
-    if (numPregunta==8){
-     radioAsignado="ocho";
+    if (numPregunta==6){
+     radioAsignado="seis";
     }
     else {
-     radioAsignado="nueve";
+     radioAsignado="siete";
     }
     for (i = 0; i < opt.length; i++) { 
         var input = document.createElement("input");
@@ -327,11 +327,11 @@ function ponerDatosCheckboxHtml(t,opt, numPregunta){
  var checkboxContainer=document.getElementsByClassName('checkboxDiv')[numPregunta-8];
  document.getElementsByTagName("h3")[numPregunta].innerHTML = t;
  var nombreAsignado;
- if (numPregunta==6){
-     nombreAsignado="seis";
+ if (numPregunta==8){
+     nombreAsignado="ocho";
  }
  else {
-     nombreAsignado="siete";
+     nombreAsignado="nueve";
  }
  for (i = 0; i < opt.length; i++) { 
     var input = document.createElement("input");
