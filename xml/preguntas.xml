@@ -21,22 +21,23 @@
         <type>multiple</type>
         <title>3. ¿Qué consolas portátiles son de Nintendo?</title>
 		<option>a) Nintendo DS</option>
-        <option>b) PSP</option>
+        <option>b) Game Boy</option>
         <option>c) PS Vita</option>
 		<option>d) Nintendo 3DS</option>
-		<option>e) Game Boy</option>
         <answer>0</answer>
+		<answer>1</answer>
 		<answer>3</answer>
-		<answer>4</answer>
     </question>
     <question id="q004">
         <type>multiple</type>
         <title>4. ¿Qué tipo de consola es Nintendo Switch?</title>
-		<option>a) Portátil</option>
-        <option>b) Sobremesa</option>
-		<option>c) Voladora</option>
+		<option>a) Portátil y Sobremesa</option>
+        <option>b) Automática</option>
+		<option>c) Portátil</option>
+		<option>d) Híbrida</option>
+		<option>e) Sobremesa</option>
         <answer>0</answer>
-		<answer>1</answer>
+		<answer>3</answer>
     </question>
     <question id="q005">
         <type>text</type>
@@ -53,37 +54,42 @@
         <type>radio</type>
         <title>7. ¿Cuál es el juego de Rockstar en el que el protagonista es un detective de los 40?</title>
         <option>a) Red Dead Redemption</option>
-        <option>b) L. A. Noire</option>
-        <option>c) GTA V</option>
-        <answer>1</answer>
+        <option>b) GTA V</option>
+        <option>c) L. A. Noire</option>
+        <answer>2</answer>
     </question>
     <question id="q008">
         <type>radio</type>
         <title>8. ¿Cuál fue el juego del año en 2017?</title>
         <option>a) Nier: Automata</option>
-        <option>b) Zelda: Breath of the Wild</option>
+        <option>b) The Last of Us</option>
         <option>c) Horizon</option>
-        <option>d) The Last of Us</option>
-        <answer>1</answer>
+        <option>d) Zelda: Breath of the Wild</option>
+        <answer>3</answer>
     </question>
     <question id="q009">
         <type>checkbox</type>
-        <title>9. ¿De qué colores puede ser la PSP 1000 o FAT -la primera-?</title>
+        <title>9. ¿De qué colores puede ser la PSP?</title>
         <option>a) Verde</option>
         <option>b) Azul</option>
         <option>c) Negra</option>
         <option>d) Blanca</option>
-		<answer>2</answer>
+		<option>e) Rosa</option>
+		<option>f) Gris</option>
+		<option>g) Blanca</option>
+		<answer>1</answer>
+        <answer>2</answer>
         <answer>3</answer>
+        <answer>4</answer>
+        <answer>5</answer>
     </question>
     <question id="q010">
         <type>checkbox</type>
         <title>10. ¿Qué consolas salieron en el año 2017?</title>
-        <option>a) Nintendo 3DS</option>
-        <option>b) Nintendo Switch</option>
+        <option>a) Nintendo Switch</option>
+        <option>b) Xbox One X</option>
         <option>c) PlayStation 4</option>
-        <option>d) Xbox One X</option>
-        <answer>1</answer>
-		<answer>3</answer>
+        <answer>0</answer>
+		<answer>1</answer>
     </question>
 </questions>
