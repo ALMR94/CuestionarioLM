@@ -193,10 +193,11 @@ function corregirText() {
         } else {
             darRespuestaHtml("- Pregunta "+(n+1)+": Incorrecta");
             if(n==4){
-                darExplicacion("Respuesta correcta: tela");
-                darExplicacion("'Tela' digo y no la entiendes; 'tela' vuelvo a repetir");
+                darExplicacion("La respuesta correcta es 'Nintendo DS', muy bien.");
+                darExplicacion("Es una consola con dos pantallas que fue muy popular");
             } else {
-                darExplicacion("Respuesta correcta: silencio");
+                darExplicacion("La respuesta correcta es 'Sony', muy bien.");
+				darExplicacion("La que lanzó esta consola, es muy popular por sus consolas domésticas y otros dispositivos electrónicos.");
             }
         }
      
