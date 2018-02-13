@@ -43,10 +43,10 @@ form{
 
 select, input[type=text] {
     padding: 0.5%;
-    border: 1px #00ef00 solid;
+    border: 1px green solid;
 	font-family: 'Ubuntu Condensed', serif;
     border-radius: 4px;
-    background-color: green;
+    background-color: black;
     color: red;
     font-size: 1.25vw;
 }
@@ -66,13 +66,13 @@ select:focus,input[type=text]:focus{
     position: fixed;
     top: 0px;
     right: 0px;
-    background-color: #00ef00 solid;
+    background-color: black;
     font-weight: bold;
 	font-size: 1.75vw;
     text-align: center;
     color: white;
     padding: 1%;
-    border: 2px black solid;
+    border: 2px green solid;
     border-radius: 4px;
     margin:0.5%;
     overflow: hidden; 
@@ -81,6 +81,8 @@ select:focus,input[type=text]:focus{
 
 #cronometro p{
     margin: 0;
+	background-color: black;
+	color: red;
 }
 
 #correccion{text-align: center}
