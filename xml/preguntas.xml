@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <questions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="preguntas.xsd">
     <question id="q001">
         <type>select</type>
-        <title>1. ¿En qué año salió el primer juego de Pokémon?</title>
-        <option>2000</option>
-        <option>1512</option>
-        <option>1996</option>
+        <title>
+            1. ¿En qué año salió el primer juego de Pokémon?
+        </title>
+        <option>a) 2000</option>
+        <option>b) 1512</option>
+        <option>c) 1996</option>
         <answer>2</answer>
     </question>
     <question id="q002">
-        <type>select</type>
-        <title>2. ¿Cuál es el nombre de la desarrolladora de videojuegos que creó a Super Mario Bros?</title>
+        <title>
+            2. ¿Cuál es el nombre de la desarrolladora de videojuegos que creó a Super Mario Bros?
+        </title>
         <option>a) Sony</option>
         <option>b) Nintendo</option>
         <option>c) Sega</option>
@@ -19,38 +21,46 @@
     </question>
     <question id="q003">
         <type>multiple</type>
-        <title>3. ¿Qué consolas portátiles son de Nintendo?</title>
-		<option>a) Nintendo DS</option>
+        <title>
+            3. ¿Qué consolas portátiles son de Nintendo?
+        </title>
+        <option>a) Nintendo DS</option>
         <option>b) Game Boy</option>
         <option>c) PS Vita</option>
 		<option>d) Nintendo 3DS</option>
         <answer>0</answer>
-		<answer>1</answer>
-		<answer>3</answer>
+        <answer>1</answer>
+        <answer>3</answer>
     </question>
-    <question id="q004">
+    </question>
+	<question id="q004">
         <type>multiple</type>
-        <title>4. ¿Qué tipo de consola es Nintendo Switch?</title>
-		<option>a) Portátil y Sobremesa</option>
+        <title>
+            4. ¿Qué tipo de consola es Nintendo Switch?
+        </title>
+        <option>a) Portátil y Sobremesa</option>
         <option>b) Automática</option>
 		<option>c) Portátil</option>
 		<option>d) Híbrida</option>
 		<option>e) Sobremesa</option>
         <answer>0</answer>
-		<answer>3</answer>
+        <answer>3</answer>
     </question>
-    <question id="q005">
+	<question id="q005">
         <type>text</type>
-        <type>text</type>
-        <title>5. La consola más vendida de todas es...</title>
+        <title>
+            5. La consola más vendida de todas es...
+        </title>
         <answer>Nintendo DS</answer>
     </question>
-    <question id="q006">
+	<question id="q006">
         <type>text</type>
-        <title>6. La compañía creadora de la PSP fue...</title>
+        <title>
+            6. La compañía creadora de la PSP fue...
+        </title>
         <answer>Sony</answer>
     </question>
-    <question id="q007">
+	<question id="q007">
         <type>radio</type>
         <title>7. ¿Cuál es el juego de Rockstar en el que el protagonista es un detective de los 40?</title>
         <option>a) Red Dead Redemption</option>
@@ -58,18 +68,28 @@
         <option>c) L. A. Noire</option>
         <answer>2</answer>
     </question>
-    <question id="q008">
+	<question id="q008">
         <type>radio</type>
         <title>8. ¿Cuál fue el juego del año en 2017?</title>
-        <option>a) Nier: Automata</option>
-        <option>b) The Last of Us</option>
-        <option>c) Horizon</option>
-        <option>d) Zelda: Breath of the Wild</option>
+        <option>
+            a) Nier: Automata
+        </option>
+        <option>
+            b) The Last of Us
+        </option>
+        <option>
+            c) Horizon
+        </option>
+        <option>
+            d) Zelda: Breath of the Wild
+        </option>
         <answer>3</answer>
     </question>
-    <question id="q009">
+	<question id="q009">
         <type>checkbox</type>
-        <title>9. ¿De qué colores puede ser la PSP?</title>
+        <title>
+            9. ¿De qué colores puede ser la PSP?
+        </title>
         <option>a) Verde</option>
         <option>b) Azul</option>
         <option>c) Negra</option>
@@ -77,19 +97,41 @@
 		<option>e) Rosa</option>
 		<option>f) Gris</option>
 		<option>g) Blanca</option>
-		<answer>1</answer>
+        <answer>1</answer>
         <answer>2</answer>
         <answer>3</answer>
         <answer>4</answer>
         <answer>5</answer>
     </question>
-    <question id="q010">
+	<question id="q010">
         <type>checkbox</type>
-        <title>10. ¿Qué consolas salieron en el año 2017?</title>
+        <title>
+            10. ¿Qué consolas salieron en el año 2017?
+        </title>
         <option>a) Nintendo Switch</option>
         <option>b) Xbox One X</option>
         <option>c) PlayStation 4</option>
         <answer>0</answer>
-		<answer>1</answer>
+        <answer>1</answer>
+    </question>
+</questions>
+
+
+    
+    
+    
+    
+    
+    
+    <question id="q010">
+        <type>checkbox</type>
+        <title>
+            10. Valore este examen (sabiendo que una mala valoración podría bajar su nota...)
+        </title>
+        <option>a) Es genial</option>
+        <option>b) Increíble</option>
+        <option>c) Malísimo (PISTA: Esta no la marques...)</option>
+        <answer>0</answer>
+        <answer>1</answer>
     </question>
 </questions>
