@@ -115,23 +115,3 @@
         <answer>1</answer>
     </question>
 </questions>
-
-
-    
-    
-    
-    
-    
-    
-    <question id="q010">
-        <type>checkbox</type>
-        <title>
-            10. Valore este examen (sabiendo que una mala valoración podría bajar su nota...)
-        </title>
-        <option>a) Es genial</option>
-        <option>b) Increíble</option>
-        <option>c) Malísimo (PISTA: Esta no la marques...)</option>
-        <answer>0</answer>
-        <answer>1</answer>
-    </question>
-</questions>
