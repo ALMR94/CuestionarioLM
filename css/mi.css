@@ -3,7 +3,7 @@ body,html{
     font-family: 'Ubuntu Condensed', serif;
     font-size:4vw;
     cursor: default;
-    background-color:green;
+    background-color:lightgreen;
     overflow-x: hidden;
     overflow-y: auto;
 }
@@ -124,7 +124,7 @@ h4{
 
 a{
     text-decoration: none;
-    color: orange;
+    color: red;
     font-size: 6.5vw;
     font-weight: bold;
 }
