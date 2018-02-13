@@ -43,7 +43,7 @@ form{
 
 select, input[type=text] {
     padding: 0.5%;
-    border: 1px green solid;
+    border: 1px #00ef00 solid;
 	font-family: 'Ubuntu Condensed', serif;
     border-radius: 4px;
     background-color: green;
@@ -66,7 +66,7 @@ select:focus,input[type=text]:focus{
     position: fixed;
     top: 0px;
     right: 0px;
-    background-color: lightgreen;
+    background-color: #00ef00 solid;
     font-weight: bold;
 	font-size: 1.75vw;
     text-align: center;
