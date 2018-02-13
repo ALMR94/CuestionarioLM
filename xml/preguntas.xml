@@ -11,6 +11,7 @@
         <answer>2</answer>
     </question>
     <question id="q002">
+		<type>select</type>
         <title>
             2. ¿Cuál es el nombre de la desarrolladora de videojuegos que creó a Super Mario Bros?
         </title>
@@ -32,7 +33,6 @@
         <answer>1</answer>
         <answer>3</answer>
     </question>
-    </question>
 	<question id="q004">
         <type>multiple</type>
         <title>
@@ -40,9 +40,9 @@
         </title>
         <option>a) Portátil y Sobremesa</option>
         <option>b) Automática</option>
-	<option>c) Portátil</option>
-	<option>d) Híbrida</option>
-	<option>e) Sobremesa</option>
+		<option>c) Portátil</option>
+		<option>d) Híbrida</option>
+		<option>e) Sobremesa</option>
         <answer>0</answer>
         <answer>3</answer>
     </question>
@@ -94,9 +94,9 @@
         <option>b) Azul</option>
         <option>c) Negra</option>
         <option>d) Blanca</option>
-	<option>e) Rosa</option>
-	<option>f) Gris</option>
-	<option>g) Blanca</option>
+		<option>e) Rosa</option>
+		<option>f) Gris</option>
+		<option>g) Blanca</option>
         <answer>1</answer>
         <answer>2</answer>
         <answer>3</answer>
