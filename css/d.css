@@ -14,7 +14,7 @@ body{
 h3{
     font-size:1.75vw;
 	font-family: 'Ubuntu Condensed', serif;
-    color:orange;
+    color:blue;
 }
 
 input,select{width:50%}
@@ -25,7 +25,7 @@ input[type=submit]{
     border: 1px darkgreen solid;
     border-radius: 4px;
     background-color: green;
-    color: orange;
+    color: white;
     font-size: 1.75vw;
     text-align: center}
 
@@ -47,13 +47,13 @@ select, input[type=text] {
 	font-family: 'Ubuntu Condensed', serif;
     border-radius: 4px;
     background-color: green;
-    color: orange;
+    color: white;
     font-size: 1.25vw;
 }
 
 
 label{
-    color: orange;
+    color: white;
     font-size: 1.25vw;
 }
 
@@ -99,7 +99,7 @@ select:focus,input[type=text]:focus{
 p{
     font-size:1.5vw;
 	font-family: 'Ubuntu Condensed', serif;
-    color:orange;
+    color:white;
 }
 
 #logo{
