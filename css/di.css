@@ -3,7 +3,7 @@ body,html{
     font-family: 'Ubuntu Condensed', serif;
     font-size:1.25vw;
     cursor: default;
-    background-color:green;
+    background-color:black;
 }
 
 body{
@@ -79,7 +79,7 @@ h4{font-size:1.75vw;font-family: 'Ubuntu Condensed', serif;}
 
 .divIndex{
     width:100%;
-    color: orange;
+    color: red;
 	font-family: 'Ubuntu Condensed', serif;
 
 }
@@ -109,7 +109,7 @@ h4{font-size:1.75vw;font-family: 'Ubuntu Condensed', serif;}
 
 a{
     text-decoration: none;
-    color: orange;
+    color: red;
 	font-family: 'Ubuntu Condensed', serif;
     font-size: 3vw;
     font-weight: bold;

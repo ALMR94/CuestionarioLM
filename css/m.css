@@ -10,7 +10,7 @@ form{background-color:cleargreen;padding:1%;font-family: 'Ubuntu Condensed', ser
 
 h3{
     font-size:5.5vw;
-    color:orange;
+    color:black;
 	font-family: 'Ubuntu Condensed', serif;
     margin: 1% 0%;
 }
@@ -28,14 +28,14 @@ select, input[type=text] {
 	font-family: 'Ubuntu Condensed', serif;
     border: 1px darkgreen solid;
     border-radius: 4px;
-    background-color: green;
-    color: orange;
+    background-color: black;
+    color: red;
     font-size: 4vw;
 }
 
 
 label{
-    color: orange;
+    color: red;
     font-size: 4vw;
 }
 
@@ -48,17 +48,16 @@ select:focus,input[type=text]:focus{
     position: fixed;
     top: 7.5%;
     right: 0px;
-    background-color: gray;
+    background-color: black;
     font-weight: bold;
 	font-size: 4vw;
     text-align: center;
-    color: orange;
+    color: red;
     padding: 1%;
     border: 2px black solid;
     border-radius: 4px;
     margin:0.5%;
-    overflow: hidden;  
-    opacity: 0.6; 
+    overflow: hidden;
 }
 
 #cronometro p{
@@ -70,8 +69,8 @@ input[type=submit]{
     padding: 2% 0%;
     border: 1px darkgreen solid;
     border-radius: 4px;
-    background-color: green;
-    color: orange;
+    background-color: black;
+    color: red;
     font-size: 5vw;
     text-align: center}
 
@@ -91,7 +90,7 @@ input[type=submit]{
 p{
     font-size:4vw;
 	font-family: 'Ubuntu Condensed', serif;
-    color:orange;
+    color:red;
 }
 
 #logo{

@@ -24,7 +24,7 @@ input[type=submit]{
     padding: 2% 0%;
     border: 1px green solid;
     border-radius: 4px;
-    background-color: green;
+    background-color: black;
     color: red;
     font-size: 1.75vw;
     text-align: center}
@@ -75,14 +75,11 @@ select:focus,input[type=text]:focus{
     border: 2px green solid;
     border-radius: 4px;
     margin:0.5%;
-    overflow: hidden; 
-    opacity: 0.6; 
+    overflow: hidden;
 }
 
 #cronometro p{
     margin: 0;
-	background-color: black;
-	color: red;
 }
 
 #correccion{text-align: center}
