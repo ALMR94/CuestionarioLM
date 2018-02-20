@@ -193,10 +193,11 @@ function corregirText() {
         } else {
             darRespuestaHtml("- Pregunta "+(n+1)+": Incorrecta");
             if(n==4){
-                darExplicacion("Respuesta correcta: tela");
-                darExplicacion("'Tela' digo y no la entiendes; 'tela' vuelvo a repetir");
+                darExplicacion("La respuesta correcta es 'Nintendo DS', muy bien.");
+                darExplicacion("Es una consola con dos pantallas que fue muy popular");
             } else {
-                darExplicacion("Respuesta correcta: silencio");
+                darExplicacion("La respuesta correcta es 'Sony', muy bien.");
+				darExplicacion("La que lanzó esta consola, es muy popular por sus consolas domésticas y otros dispositivos electrónicos.");
             }
         }
      
@@ -223,7 +224,7 @@ function corregirRadio(){
                 darExplicacion("Respuesta correcta: c");
             } else {
                 darExplicacion("Respuesta correcta: d");
-                darExplicacion("Lo más rápido en la sabana siempre será el vehículo.");
+                darExplicacion("Zelda ganó el premio, tras haber reinventado la saga de una forma original.");
             }
         } 
     }        
@@ -231,7 +232,7 @@ function corregirRadio(){
 
 //Corrección de los checkbox
 function corregirCheckbox(){
-  //Para cada opción mira si está checkeada, si está checkeada mira si es correcta y lo guarda en un array escorrecta[]
+  //Para cada opción mira si está checkeada, si está checkeada mira si es correcta y lo guarda en un array es correcta[]
   var f=formElement;
   var escorrecta = [];
   for (n=8;n<10;n++){
@@ -261,7 +262,7 @@ function corregirCheckbox(){
         } 
     }
     if(n==8 && mal==true){
-                darExplicacion("Respuestas correcta: b, c, d, e, f");
+                darExplicacion("Respuestas correctas: b, c, d, e, f");
             } else if (n==9 && mal==true) {
                 darExplicacion("Respuestas correcta: a, b");
             }
@@ -270,7 +271,7 @@ function corregirCheckbox(){
 }
 
 //****************************************************************************************************
-// Poner los datos recibios en el HTML
+// Poner los datos recibidos en el HTML
 
 
 function ponerDatosSelectHtml(t, opt, numPregunta) {
