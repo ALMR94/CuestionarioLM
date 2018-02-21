@@ -52,14 +52,14 @@
         <title>
             5. La consola más vendida de todas es...
         </title>
-        <answer>Nintendo DS</answer>
+        <answer>nintendo ds</answer>
     </question>
 	<question id="q006">
         <type>text</type>
         <title>
             6. La compañía creadora de la PSP fue...
         </title>
-        <answer>Sony</answer>
+        <answer>sony</answer>
     </question>
 	<question id="q007">
         <type>radio</type>
