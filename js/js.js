@@ -10,8 +10,6 @@ var min=10;
 var seg=0;
 var alerta=false;
 
-//**************************************************************************************************** 
-//Después de cargar la página (onload) se definen los eventos sobre los elementos entre otras acciones.
 window.onload = function() {
 
     //CORREGIR al apretar el botón
@@ -43,7 +41,7 @@ window.onload = function() {
             gestionarXml(this);
         }
     };
-    xhttp.open("GET", "xml/preguntas.xml", true); //cambiar URL al subir al github!!!
+    xhttp.open("GET", "xml/preguntas.xml", true);
     xhttp.send();
     
     setInterval(actualizarTime,1000);
@@ -141,10 +139,10 @@ function corregirSelect(){
             darRespuestaHtml("- Pregunta "+(n+1)+": Incorrecta");
             if(n==0){
                 darExplicacion("Respuesta correcta: c");
-                darExplicacion("Si un avión explota no podrás salir de él, como mucho saldrás por las noticias.");
+                darExplicacion("Los primeros dos juegos salieron en 1996 en Japón.");
             } else {
                 darExplicacion("Respuesta correcta: c");
-                darExplicacion("En un incendio, las llamas siempre tienen la culpa.");
+                darExplicacion("Nos referimos a la fecha de salida japonesa, obviamente.");
             }
         }       
     }       
@@ -187,7 +185,7 @@ function corregirMultiple(){
 function corregirText() {
     for(n=4;n<6;n++){
         var txt = formElement.elements[n].value;  
-         if (txt.toLowerCase()==respuestaText[n]) {
+         if (txt==respuestaText[n]) {
             darRespuestaHtml("- Pregunta "+(n+1)+": Correcta");
             nota +=1;
         } else {
