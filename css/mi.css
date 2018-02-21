@@ -85,8 +85,8 @@ h4{
 
 #logo{
     text-align:center;
-    width:100%;
-    padding:1% 0%;
+    width:50%;
+    padding:1% 25%;
     background-color:lightgreen;
 }
 
@@ -96,7 +96,7 @@ h4{
 
 .divIndex{
     width:100%;
-    color: orange;
+    color: red;
 }
 
 #ubiDiv{
@@ -132,7 +132,7 @@ a{
 
 
 a:hover{
-    color: darkgreen;
+    color: darkblue;
     text-decoration: underline;
 }
 
