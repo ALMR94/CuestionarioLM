@@ -185,17 +185,17 @@ function corregirMultiple(){
 function corregirText() {
     for(n=4;n<6;n++){
         var txt = formElement.elements[n].value;  
-         if (txt==respuestaText[n]) {
+         if (txt.toLowerCase()==respuestaText[n]) {
             darRespuestaHtml("- Pregunta "+(n+1)+": Correcta");
             nota +=1;
         } else {
             darRespuestaHtml("- Pregunta "+(n+1)+": Incorrecta");
             if(n==4){
-                darExplicacion("La respuesta correcta es 'Nintendo DS', muy bien.");
+                darExplicacion("La respuesta correcta es 'Nintendo DS', muy mal.");
                 darExplicacion("Es una consola con dos pantallas que fue muy popular");
             } else {
-                darExplicacion("La respuesta correcta es 'Sony', muy bien.");
-				darExplicacion("La que lanzó esta consola, es muy popular por sus consolas domésticas y otros dispositivos electrónicos.");
+                darExplicacion("La respuesta correcta es 'Sony', muy mal.");
+				darExplicacion("Es una compañía muy popular por sus consolas domésticas y otros dispositivos electrónicos.");
             }
         }
      
