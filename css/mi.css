@@ -65,7 +65,7 @@ h4{
     border: 1px royalblue solid;
 }
 
-#exam{
+#quest{
     width:80%;
 }
 
@@ -99,11 +99,11 @@ h4{
     color: red;
 }
 
-#ubiDiv{
+#snDiv{
     display:none;
 
 }
-#examDiv{
+#questDiv{
     display:none;
 }
 
@@ -111,12 +111,12 @@ h4{
     text-decoration: underline;
 }
 
-.ubiImg{
+.snImg{
     max-width: 70%;
     margin: 1%;
 }
 
-#imagenesUbi{
+#imagenesSN{
     text-align:center;
     width:100%;
     padding:1% 0%;

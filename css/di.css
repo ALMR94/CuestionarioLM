@@ -84,11 +84,11 @@ h4{font-size:1.75vw;font-family: 'Ubuntu Condensed', serif;}
 
 }
 
-#ubiDiv{
+#snDiv{
     display:none;
 
 }
-#examDiv{
+#questDiv{
     display:none;
 }
 
@@ -96,12 +96,12 @@ h4{font-size:1.75vw;font-family: 'Ubuntu Condensed', serif;}
     text-decoration: underline;
 }
 
-.ubiImg{
+.snImg{
     width: 30%;
     margin: 0% 5%;
 }
 
-#imagenesUbi{
+#imagenesSN{
     text-align:center;
     width:100%;
     padding:1% 0%;
