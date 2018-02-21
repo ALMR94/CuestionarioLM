@@ -9,13 +9,13 @@ window.onload = function(){
 		borrarTodo();
 		mostrarInfo();
 	}
-	document.getElementById("ubi").onclick = function(){
+	document.getElementById("sn").onclick = function(){
 		borrarTodo();
-		mostrarUbi();
+		mostrarSN();
 	}
-	document.getElementById("exam").onclick = function(){
+	document.getElementById("quest").onclick = function(){
 		borrarTodo();
-		mostrarExam();
+		mostrarQuest();
 	}
 
 }
@@ -27,21 +27,21 @@ function mostrarInfo(){
 	document.getElementById("infoDiv").style.display="block";
 }
 
-function mostrarUbi(){
-	document.getElementById("ubi").style.textDecoration="underline";
-	document.getElementById("ubiDiv").style.display="block";
+function mostrarSN(){
+	document.getElementById("sn").style.textDecoration="underline";
+	document.getElementById("snDiv").style.display="block";
 }
 
-function mostrarExam(){
-	document.getElementById("exam").style.textDecoration="underline";
-	document.getElementById("examDiv").style.display="block";
+function mostrarQuest(){
+	document.getElementById("quest").style.textDecoration="underline";
+	document.getElementById("questDiv").style.display="block";
 }
 
 function borrarTodo(){
 	document.getElementById("info").style.textDecoration="none";
-	document.getElementById("ubi").style.textDecoration="none";
-	document.getElementById("exam").style.textDecoration="none";
+	document.getElementById("sn").style.textDecoration="none";
+	document.getElementById("quest").style.textDecoration="none";
 	document.getElementById("infoDiv").style.display="none";
-	document.getElementById("ubiDiv").style.display="none";
-	document.getElementById("examDiv").style.display="none";
+	document.getElementById("snDiv").style.display="none";
+	document.getElementById("questDiv").style.display="none";
 }
