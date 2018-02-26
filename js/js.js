@@ -4,7 +4,7 @@ var respuestasMultiple = [];
 var respuestaText = [];
 var respuestaRadio = [];
 var respuestasCheckbox = [];
-var nota = 0; //nota de la prueba sobre 10
+var nota = 0;
 
 var min=10;
 var seg=0;
@@ -12,7 +12,7 @@ var alerta=false;
 
 window.onload = function() {
 
-    //CORREGIR al apretar el botón
+    //CORREGIR apretando botón
     formElement = document.getElementById('myform');
     formElement.onsubmit = function() {
         inicializar();
@@ -34,7 +34,7 @@ window.onload = function() {
         return false;
     }
 
-    //LEER XML de xml/preguntas.xml
+    //LEER XML
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -50,13 +50,11 @@ window.onload = function() {
 }
 
 //****************************************************************************************************
-// Recuperamos los datos del fichero XML xml/preguntas.xml
-// xmlDOC es el documento leido XML. 
+// Recuperamos los datos del XML
 function gestionarXml(dadesXml) {
-    var xmlDoc = dadesXml.responseXML; //Parse XML to xmlDoc  
+    var xmlDoc = dadesXml.responseXML; 
 
     //SELECT
-    //Recuperamos el título y las opciones, guardamos la respuesta correcta
     for (numPregunta=0; numPregunta<2; numPregunta++) {
         var tituloSelect = xmlDoc.getElementsByTagName("title")[numPregunta].innerHTML;
         var opcionesSelect = [];
@@ -69,7 +67,6 @@ function gestionarXml(dadesXml) {
     }
     
     //SELECT MULTIPLE
-    //Recuperamos el título y las opciones, guardamos las respuestas correctas
     for (numPregunta=2; numPregunta<4; numPregunta++){
         var tituloMultiple = xmlDoc.getElementsByTagName("title")[numPregunta].innerHTML;
         var opcionesMultiple = [];
@@ -86,7 +83,6 @@ function gestionarXml(dadesXml) {
     }
 
     //TEXT
-    //Recuperamos el título y la respuesta correcta del input text
     for (numPregunta=4; numPregunta<6; numPregunta++) {
         var tituloInput = xmlDoc.getElementsByTagName("title")[numPregunta].innerHTML;
         ponerDatosInputHtml(tituloInput,numPregunta);
@@ -94,7 +90,6 @@ function gestionarXml(dadesXml) {
     }
 
     //RADIO
-    //Recuperamos el título y las opciones, guardamos la respuesta correcta
     for (numPregunta=6 ; numPregunta<8;numPregunta++) {
         var tituloRadio = xmlDoc.getElementsByTagName("title")[numPregunta].innerHTML;
         var opcionesRadio = [];
@@ -107,7 +102,6 @@ function gestionarXml(dadesXml) {
     }
 
     //CHECKBOX
-    //Recuperamos el título y las opciones, guardamos las respuestas correctas
     for (numPregunta=8; numPregunta<10; numPregunta++){
         var tituloCheckbox = xmlDoc.getElementsByTagName("title")[numPregunta].innerHTML;
         var opcionesCheckbox = [];
@@ -124,10 +118,8 @@ function gestionarXml(dadesXml) {
     }
 }
 
-//****************************************************************************************************
-// Implementación de la corrección
 
-//Corrección de los dos Select
+//Correcciones de Select
 function corregirSelect(){
     for(n=0;n<2;n++){
         var sel = formElement.elements[n];  
@@ -148,7 +140,7 @@ function corregirSelect(){
     }       
 }
 
-//Corrección de los Select MULTIPLE
+//Corrección de Select Múltiple
 function corregirMultiple(){
     for(n=2;n<4;n++){
         var sel = formElement.elements[n];
@@ -161,12 +153,12 @@ function corregirMultiple(){
                 for (j = 0; j < respuestasMultiple[n].length; j++) {
                     if ((i-1)==respuestasMultiple[n][j]) escorrecta[i]=true;
                 }
-                //si es correcta sumamos y ponemos mensaje, si no es correcta restamos y ponemos mensaje.
+                //si es correcta sumamos, si no es correcta restamos poniendo el mensaje correspondiente a cada caso.
                 if (escorrecta[i]) {
-                    nota +=1.0/respuestasMultiple[n].length;  //dividido por el número de respuestas correctas   
+                    nota +=1.0/respuestasMultiple[n].length;   
                     darRespuestaHtml("- Pregunta "+(n+1)+": Opción "+i+" Correcta");    
                 } else {
-                    nota -=1.0/respuestasMultiple[n].length;  //dividido por el número de respuestas correctas   
+                    nota -=1.0/respuestasMultiple[n].length;  
                     darRespuestaHtml("- Pregunta "+(n+1)+": Opción"+i+" Incorrecta");
                     mal=true;
                 }
@@ -230,7 +222,7 @@ function corregirRadio(){
 
 //Corrección de los checkbox
 function corregirCheckbox(){
-  //Para cada opción mira si está checkeada, si está checkeada mira si es correcta y lo guarda en un array es correcta[]
+  //Para cada opción mira si está seleccionada, si lo está mira si es correcta y lo guarda en un array si es correcta
   var f=formElement;
   var escorrecta = [];
   for (n=8;n<10;n++){
@@ -248,12 +240,12 @@ function corregirCheckbox(){
             for (j = 0; j < respuestasCheckbox[n].length; j++) {
                 if (i==respuestasCheckbox[n][j]) escorrecta[i]=true;
             }
-            //si es correcta sumamos y ponemos mensaje, si no es correcta restamos y ponemos mensaje.
+            //si es correcta sumamos, si no es correcta restamos poniendo el mensaje correspondiente a cada caso.
             if (escorrecta[i]) {
-                nota +=1.0/respuestasCheckbox[n].length;  //dividido por el número de respuestas correctas   
+                nota +=1.0/respuestasCheckbox[n].length;   
                 darRespuestaHtml("- Pregunta "+(n+1)+": Opción "+(i+1)+" Correcta");    
             } else {
-                nota -=1.0/respuestasCheckbox[n].length;  //dividido por el número de respuestas correctas   
+                nota -=1.0/respuestasCheckbox[n].length;  
                 darRespuestaHtml("- Pregunta "+(n+1)+": Opción "+(i+1)+" Incorrecta");
                 mal=true;
             }   
@@ -268,8 +260,8 @@ function corregirCheckbox(){
   
 }
 
-//****************************************************************************************************
-// Poner los datos recibidos en el HTML
+
+// Pasar datos recibidos al HTML
 
 
 function ponerDatosSelectHtml(t, opt, numPregunta) {
@@ -372,11 +364,11 @@ function inicializar() {
     nota = 0.0;
 }
 
-//Comprobar que se han introducido datos en el formulario
+//Comprobación de introducción de datos en el formulario
 function comprobar(){
    var f=formElement;
 
-   // Comprobación del select normal
+   // Comprobación del select
    for(numPreg=0;numPreg<2;numPreg++){
     if (f.elements[numPreg].selectedIndex==0) {
     f.elements[numPreg].focus();
@@ -444,8 +436,7 @@ function comprobar(){
   return true;
 }
 
-//****************************************************************************************************
-//Funciones del tiempo
+//Funciones para el cronómetro de la duración del cuestionario, que serán 10 minutos.
 
 function actualizarTime(){
     var segTimer;
