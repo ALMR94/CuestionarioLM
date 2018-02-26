@@ -6,7 +6,7 @@ var respuestaRadio = [];
 var respuestasCheckbox = [];
 var nota = 0;
 
-var min = 10;
+var min = 5;
 var seg = 0;
 var alerta=false;
 
@@ -386,7 +386,7 @@ function comprobar(){
         }
         if (!multRespondido) {
         f.elements[numPreg].focus();
-        alert("Por favor, selecciona al menos una opcion en la pregunta "+(numPreg+1));
+        alert("Por favor, selecciona al menos una opcion en la pregunta "+(numPreg + 1));
         return false;
         }
    }
@@ -441,7 +441,7 @@ function actualizarTime(){
     var segTimer;
 
     if((min >= 0) && (seg >= 0)){   
-        if(seg < 5){
+        if(seg < 10){
             segTimer="0"+seg;
         }else{
             segTimer=seg;
