@@ -6,8 +6,8 @@ var respuestaRadio = [];
 var respuestasCheckbox = [];
 var nota = 0;
 
-var min=10;
-var seg=0;
+var min = 10;
+var seg = 0;
 var alerta=false;
 
 window.onload = function() {
@@ -49,13 +49,12 @@ window.onload = function() {
     
 }
 
-//****************************************************************************************************
-// Recuperamos los datos del XML
+// Recuperar datos del XML
 function gestionarXml(dadesXml) {
     var xmlDoc = dadesXml.responseXML; 
 
     //SELECT
-    for (numPregunta=0; numPregunta<2; numPregunta++) {
+    for (numPregunta = 0; numPregunta < 2; numPregunta++) {
         var tituloSelect = xmlDoc.getElementsByTagName("title")[numPregunta].innerHTML;
         var opcionesSelect = [];
         var nopt = xmlDoc.getElementsByTagName("question")[numPregunta].getElementsByTagName('option').length;
@@ -67,7 +66,7 @@ function gestionarXml(dadesXml) {
     }
     
     //SELECT MULTIPLE
-    for (numPregunta=2; numPregunta<4; numPregunta++){
+    for (numPregunta = 2; numPregunta < 4; numPregunta++){
         var tituloMultiple = xmlDoc.getElementsByTagName("title")[numPregunta].innerHTML;
         var opcionesMultiple = [];
         var nopt = xmlDoc.getElementsByTagName("question")[numPregunta].getElementsByTagName('option').length;
@@ -83,14 +82,14 @@ function gestionarXml(dadesXml) {
     }
 
     //TEXT
-    for (numPregunta=4; numPregunta<6; numPregunta++) {
+    for (numPregunta = 4; numPregunta < 6; numPregunta++) {
         var tituloInput = xmlDoc.getElementsByTagName("title")[numPregunta].innerHTML;
         ponerDatosInputHtml(tituloInput,numPregunta);
         respuestaText[numPregunta] = xmlDoc.getElementsByTagName("question")[numPregunta].getElementsByTagName("answer")[0].innerHTML;
     }
 
     //RADIO
-    for (numPregunta=6 ; numPregunta<8;numPregunta++) {
+    for (numPregunta = 6 ; numPregunta < 8;numPregunta++) {
         var tituloRadio = xmlDoc.getElementsByTagName("title")[numPregunta].innerHTML;
         var opcionesRadio = [];
         var nopt = xmlDoc.getElementsByTagName("question")[numPregunta].getElementsByTagName('option').length;
@@ -102,7 +101,7 @@ function gestionarXml(dadesXml) {
     }
 
     //CHECKBOX
-    for (numPregunta=8; numPregunta<10; numPregunta++){
+    for (numPregunta = 8; numPregunta < 10; numPregunta++){
         var tituloCheckbox = xmlDoc.getElementsByTagName("title")[numPregunta].innerHTML;
         var opcionesCheckbox = [];
         var nopt = xmlDoc.getElementsByTagName("question")[numPregunta].getElementsByTagName('option').length;
@@ -121,15 +120,15 @@ function gestionarXml(dadesXml) {
 
 //Correcciones de Select
 function corregirSelect(){
-    for(n=0;n<2;n++){
+    for(n = 0;n < 2;n++){
         var sel = formElement.elements[n];  
          if ((sel.selectedIndex-1)==respuestaSelect[n]) {
             darRespuestaHtml("- Pregunta "+(n+1)+": Correcta");
-            nota +=1;
+            nota += 1;
             }
         else {
             darRespuestaHtml("- Pregunta "+(n+1)+": Incorrecta");
-            if(n==0){
+            if(n == 0){
                 darExplicacion("Respuesta correcta: c");
                 darExplicacion("Los primeros dos juegos salieron en 1996 en Japón.");
             } else {
@@ -142,31 +141,31 @@ function corregirSelect(){
 
 //Corrección de Select Múltiple
 function corregirMultiple(){
-    for(n=2;n<4;n++){
+    for(n = 2;n < 4;n++){
         var sel = formElement.elements[n];
         var escorrecta=[];
         var mal=false;
-        for(i=1;i<(sel.length);i++){
+        for(i = 1;i<(sel.length);i++){
             var opt=sel.options[i];
             if(opt.selected){
                 escorrecta[i]=false; 
                 for (j = 0; j < respuestasMultiple[n].length; j++) {
-                    if ((i-1)==respuestasMultiple[n][j]) escorrecta[i]=true;
+                    if ((i - 1)==respuestasMultiple[n][j]) escorrecta[i]=true;
                 }
                 //si es correcta sumamos, si no es correcta restamos poniendo el mensaje correspondiente a cada caso.
                 if (escorrecta[i]) {
-                    nota +=1.0/respuestasMultiple[n].length;   
+                    nota += 1.0/respuestasMultiple[n].length;   
                     darRespuestaHtml("- Pregunta "+(n+1)+": Opción "+i+" Correcta");    
                 } else {
-                    nota -=1.0/respuestasMultiple[n].length;  
+                    nota -= 1.0/respuestasMultiple[n].length;  
                     darRespuestaHtml("- Pregunta "+(n+1)+": Opción"+i+" Incorrecta");
                     mal=true;
                 }
             }
         } 
-        if(n==2 && mal==true){
+        if(n == 2 && mal==true){
                 darExplicacion("Respuestas correcta: a, b, d");
-            } else if (n==3 && mal==true) {
+            } else if (n == 3 && mal==true) {
                 darExplicacion("Respuestas correcta: a, d");
             }
         
@@ -175,14 +174,14 @@ function corregirMultiple(){
 
 //Corrección de los text
 function corregirText() {
-    for(n=4;n<6;n++){
+    for(n = 4;n < 6;n++){
         var txt = formElement.elements[n].value;  
          if (txt.toLowerCase()==respuestaText[n]) {
-            darRespuestaHtml("- Pregunta "+(n+1)+": Correcta");
-            nota +=1;
+            darRespuestaHtml("- Pregunta "+(n + 1)+": Correcta");
+            nota += 1;
         } else {
-            darRespuestaHtml("- Pregunta "+(n+1)+": Incorrecta");
-            if(n==4){
+            darRespuestaHtml("- Pregunta "+(n + 1)+": Incorrecta");
+            if(n == 4){
                 darExplicacion("La respuesta correcta es 'Nintendo DS', muy mal.");
                 darExplicacion("Es una consola con dos pantallas que fue muy popular");
             } else {
@@ -197,9 +196,9 @@ function corregirText() {
 //Corrección de los radio
 function corregirRadio(){
     var f=formElement;
-    for(n=6;n<8;n++){
+    for(n = 6;n < 8;n++){
         var nombreRadio;
-        if (n==6){
+        if (n == 6){
             nombreRadio=f.seis;
         } else {
             nombreRadio=f.siete;
@@ -210,7 +209,7 @@ function corregirRadio(){
             }
         else {
             darRespuestaHtml("- Pregunta "+(n+1)+": Incorrecta");
-             if(n==4){
+             if(n == 4){
                 darExplicacion("Respuesta correcta: c");
             } else {
                 darExplicacion("Respuesta correcta: d");
@@ -225,10 +224,10 @@ function corregirCheckbox(){
   //Para cada opción mira si está seleccionada, si lo está mira si es correcta y lo guarda en un array si es correcta
   var f=formElement;
   var escorrecta = [];
-  for (n=8;n<10;n++){
+  for (n = 8;n < 10;n++){
     var nombre;
     var mal=false;
-    if (n==8){
+    if (n == 8){
         nombre=f.ocho;
     } else {
         nombre=f.nueve;
@@ -242,18 +241,18 @@ function corregirCheckbox(){
             }
             //si es correcta sumamos, si no es correcta restamos poniendo el mensaje correspondiente a cada caso.
             if (escorrecta[i]) {
-                nota +=1.0/respuestasCheckbox[n].length;   
+                nota += 1.0/respuestasCheckbox[n].length;   
                 darRespuestaHtml("- Pregunta "+(n+1)+": Opción "+(i+1)+" Correcta");    
             } else {
-                nota -=1.0/respuestasCheckbox[n].length;  
+                nota -= 1.0/respuestasCheckbox[n].length;  
                 darRespuestaHtml("- Pregunta "+(n+1)+": Opción "+(i+1)+" Incorrecta");
                 mal=true;
             }   
         } 
     }
-    if(n==8 && mal==true){
+    if(n == 8 && mal==true){
                 darExplicacion("Respuestas correctas: b, c, d, e, f");
-            } else if (n==9 && mal==true) {
+            } else if (n == 9 && mal==true) {
                 darExplicacion("Respuestas correcta: a, b");
             }
   }
@@ -295,7 +294,7 @@ function ponerDatosRadioHtml(t, opt, numPregunta) {
     document.getElementsByTagName("h3")[numPregunta].innerHTML = t;
     var radioCont = document.getElementsByClassName('radioDiv')[numPregunta-6];
     var radioAsignado;
-    if (numPregunta==6){
+    if (numPregunta == 6){
      radioAsignado="seis";
     }
     else {
@@ -318,7 +317,7 @@ function ponerDatosCheckboxHtml(t,opt, numPregunta){
  var checkboxContainer=document.getElementsByClassName('checkboxDiv')[numPregunta-8];
  document.getElementsByTagName("h3")[numPregunta].innerHTML = t;
  var nombreAsignado;
- if (numPregunta==8){
+ if (numPregunta == 8){
      nombreAsignado="ocho";
  }
  else {
@@ -377,9 +376,9 @@ function comprobar(){
     }
    }
    // Comprobación del select multiple
-   for(numPreg=2;numPreg<4;numPreg++){
+   for(numPreg = 2;numPreg < 4;numPreg++){
        var multRespondido=false;
-        for(i=1;i<(f.elements[numPreg].length);i++){
+        for(i = 1;i < (f.elements[numPreg].length);i++){
             var opt=f.elements[numPreg].options[i];
             if(opt.selected){
                 multRespondido=true;
@@ -392,7 +391,7 @@ function comprobar(){
         }
    }
    // Comprobación del text
-   for(numPreg=4;numPreg<6;numPreg++){
+   for(numPreg = 4;numPreg < 6;numPreg++){
     if (f.elements[numPreg].value=="") {
     f.elements[numPreg].focus();
     alert("Por favor, responde la pregunta "+(numPreg+1));
@@ -400,9 +399,9 @@ function comprobar(){
     }
    }
    // Comprobación del radio
-   for(numPreg=6;numPreg<8;numPreg++){
+   for(numPreg = 6;numPreg < 8;numPreg++){
        var nombreRadio;
-        if (numPreg==6){
+        if (numPreg == 6){
             nombreRadio=f.seis;
         } else {
             nombreRadio=f.siete;
@@ -414,10 +413,10 @@ function comprobar(){
         }   
     }
    // Comprobación del checkbox
-   for(numPreg=8;numPreg<10;numPreg++){
+   for(numPreg = 8;numPreg < 10;numPreg++){
         var checked=false;
         var nombre;
-        if (numPreg==8){
+        if (numPreg == 8){
             nombre=f.ocho;
         } else {
         nombre=f.nueve;
@@ -436,13 +435,13 @@ function comprobar(){
   return true;
 }
 
-//Funciones para el cronómetro de la duración del cuestionario, que serán 10 minutos.
+//Funciones para el cronómetro de la duración del cuestionario, que serán 5 minutos.
 
 function actualizarTime(){
     var segTimer;
 
-    if((min>=0) && (seg>=0)){   
-        if(seg<10){
+    if((min >= 0) && (seg >= 0)){   
+        if(seg < 5){
             segTimer="0"+seg;
         }else{
             segTimer=seg;
@@ -456,7 +455,7 @@ function actualizarTime(){
     }else{
         document.getElementById("timer").innerHTML="0 : 00";        
         if (!alerta){
-            alert("Se acabó el tiempo. Date prisa en enviar tus respuestas.");
+            alert("¡Tiempo! Has tardado mucho en resolver el cuestionario... tendrás que intentarlo de nuevo.");
             alerta=true;
     }
         
