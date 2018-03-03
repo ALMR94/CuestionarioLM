@@ -1,0 +1,168 @@
+{
+  "questions": {
+    "-xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+    "-xsi:noNamespaceSchemaLocation": "preguntas.xsd",
+    "parsererror": {
+      "-style": "display: block; white-space: pre; border: 2px solid #c77; padding: 0 1em 0 1em; margin: 1em; background-color: #fdd; color: black",
+      "h3": [
+        "This page contains the following errors:",
+        "Below is a rendering of the page up to the first error."
+      ],
+      "div": {
+        "-style": "font-family:monospace;font-size:12px",
+        "#text": "error on line 119 at column 1: Extra content at the end of the document
+"
+      }
+    },
+    "question": [
+      {
+        "-id": "q001",
+        "type": "select",
+        "title": "
+            1. ¿En qué año salió el primer juego de Pokémon?
+        ",
+        "option": [
+          "a) 2000",
+          "b) 1512",
+          "c) 1996"
+        ],
+        "answer": "2"
+      },
+      {
+        "-id": "q002",
+        "type": "select",
+        "title": "
+            2. ¿Cuál es el nombre de la desarrolladora de videojuegos que creó a Super Mario Bros?
+        ",
+        "option": [
+          "a) Sony",
+          "b) Nintendo",
+          "c) Sega"
+        ],
+        "answer": "1"
+      },
+      {
+        "-id": "q003",
+        "type": "multiple",
+        "title": "
+            3. ¿Qué consolas portátiles son de Nintendo?
+        ",
+        "option": [
+          "a) Nintendo DS",
+          "b) Game Boy",
+          "c) PS Vita",
+          "d) Nintendo 3DS"
+        ],
+        "answer": [
+          "0",
+          "1",
+          "3"
+        ]
+      },
+      {
+        "-id": "q004",
+        "type": "multiple",
+        "title": "
+            4. ¿Qué tipo de consola es Nintendo Switch?
+        ",
+        "option": [
+          "a) Portátil y Sobremesa",
+          "b) Automática",
+          "c) Portátil",
+          "d) Híbrida",
+          "e) Sobremesa"
+        ],
+        "answer": [
+          "0",
+          "3"
+        ]
+      },
+      {
+        "-id": "q005",
+        "type": "text",
+        "title": "
+            5. La consola más vendida de todas es...
+        ",
+        "answer": "nintendo ds"
+      },
+      {
+        "-id": "q006",
+        "type": "text",
+        "title": "
+            6. La compañía creadora de la PSP fue...
+        ",
+        "answer": "sony"
+      },
+      {
+        "-id": "q007",
+        "type": "radio",
+        "title": "7. ¿Cuál es el juego de Rockstar en el que el protagonista es un detective de los 40?",
+        "option": [
+          "a) Red Dead Redemption",
+          "b) GTA V",
+          "c) L. A. Noire"
+        ],
+        "answer": "2"
+      },
+      {
+        "-id": "q008",
+        "type": "radio",
+        "title": "8. ¿Cuál fue el juego del año en 2017?",
+        "option": [
+          "
+            a) Nier: Automata
+        ",
+          "
+            b) The Last of Us
+        ",
+          "
+            c) Horizon
+        ",
+          "
+            d) Zelda: Breath of the Wild
+        "
+        ],
+        "answer": "3"
+      },
+      {
+        "-id": "q009",
+        "type": "checkbox",
+        "title": "
+            9. ¿De qué colores puede ser la PSP?
+        ",
+        "option": [
+          "a) Verde",
+          "b) Azul",
+          "c) Negra",
+          "d) Blanca",
+          "e) Rosa",
+          "f) Gris",
+          "g) Arcoiris"
+        ],
+        "answer": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ]
+      },
+      {
+        "-id": "q010",
+        "type": "checkbox",
+        "title": "
+            10. ¿Qué consolas salieron en el año 2017?
+        ",
+        "option": [
+          "a) Nintendo Switch",
+          "b) Xbox One X",
+          "c) PlayStation 4"
+        ],
+        "answer": [
+          "0",
+          "1"
+        ]
+      }
+    ]
+  }
+}
