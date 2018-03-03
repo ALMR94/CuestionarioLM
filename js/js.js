@@ -337,7 +337,7 @@ function ponerDatosCheckboxHtml(t,opt, numPregunta){
  }  
 }
 
-//****************************************************************************************************
+
 //Gestionar la presentación de las respuestas
 function darRespuestaHtml(r) {
     var p = document.createElement("p");
@@ -460,6 +460,5 @@ function actualizarTime(){
     }
         
     }
-         
-    
+             
 }
